@@ -85,7 +85,7 @@
 }
 .emoji-picker-react {
   position: fixed;
-  right: 9%;
+  right: 6%;
   bottom: 5%; /* Position it above the input field */
   z-index: 1;
 }

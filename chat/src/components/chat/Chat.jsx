@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import socketIo from "socket.io-client";
 import Picker from "emoji-picker-react";
-import "./Chat.css";
+import "./Chat.css"; // Import CSS styles
 const userList = ["Alan", "Bob", "Carol", "Dean", "Elin"];
 let socket;
 
@@ -107,7 +107,7 @@ const ChatApp = () => {
           placeholder="Type a message..."
         />
         <div
-          className="emoji"
+          className="emoji" // Relative positioning for emoji picker button
           onClick={() => setShowEmojiPicker(!showEmojiPicker)}
         >
           😀
