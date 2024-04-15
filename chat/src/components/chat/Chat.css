@@ -1,88 +1,91 @@
-.chatPage{
-    background-color: rgb(31, 29, 29);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.chatContainer{
-    background-color: white;
-    height: 60%;
-    width: 50%;
+.chat-thread {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.header{
-    background-color: crimson;
-    height: 15%;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
+.chat-message {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.header>h2{
-    font-size: 1.5vmax;
-    color: white;
-    margin: 2.5vmax;
+.chat-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 
-.header img{
-    
-    margin: 2.5vmax;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-.header>img:hover{
-    transform: scale(1.2);
+.chat-circle-letter {
+  font-size: 15px;
+  font-weight: bold;
 }
 
-
-.chatBox{
-
- height: 70%;
- box-sizing: border-box;
- 
+.chat-message span {
+  font-weight: 600;
 }
 
-.inputBox{
-    
-    height: 15%;
-    box-sizing: border-box;
-    display: flex;
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
-#chatInput{
-   
-    width: 80%;
-    border: none;
-    padding: 2vmax;
-    box-sizing: border-box;
-    background-color: white;
-    outline: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2vmax;
-    border-top: 0.2vmax solid rgba(41, 41, 41, 0.562);
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+.emoji {
+  font-size: larger;
+  padding-right: 4px;
+  cursor: pointer;
+}
+.send-btn {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
-.sendBtn{
-    background-color: crimson;
-    color: white;
-    border: none;
-    width: 21%;
-    transition: all 0.3s;
-    cursor: pointer;
+.chat-input .send-btn:hover {
+  background-color: #1e5ea3;
 }
 
-.sendBtn>img{
-    width: 2.6vmax;
-    filter:brightness(100) invert();
-    transition: all 0.3s;
+.like-button {
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
 }
-.sendBtn:hover{
-    background-color: rgb(156, 13, 42);
-} 
-.sendBtn:hover img{
-    transform: translateX(10px);
+.emoji-picker-react {
+  position: fixed;
+  right: 9%;
+  bottom: 5%; /* Position it above the input field */
+  z-index: 1;
 }
